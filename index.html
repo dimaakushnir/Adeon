@@ -41,8 +41,39 @@
                 d="M6.20896 9.082C6.08163 9.082 5.95296 9.03333 5.85563 8.93533L4.27296 7.35333C4.07763 7.158 4.07763 6.842 4.27296 6.64667C4.4683 6.45133 4.7843 6.45133 4.97963 6.64667L6.20896 7.87467L9.01963 5.06467C9.21496 4.86933 9.53096 4.86933 9.7263 5.06467C9.92163 5.26 9.92163 5.576 9.7263 5.77133L6.5623 8.93533C6.46496 9.03333 6.33696 9.082 6.20896 9.082Z" />
         </g>
     </symbol>
+    <symbol id="check" viewBox="0 0 24 24">
+        <g>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M10.9215 0.0426841C9.49163 0.178407 7.89236 0.634441 6.65456 1.25945C5.374 1.90603 4.03356 2.92911 3.11504 3.96095C1.31335 5.98492 0.291008 8.32475 0.0440865 10.9896C-0.149803 13.0821 0.302871 15.4415 1.26336 17.3443C1.90983 18.6251 2.93273 19.9657 3.9644 20.8844C5.98802 22.6864 8.32745 23.7089 10.9919 23.9559C13.084 24.1498 15.4429 23.6971 17.3454 22.7364C18.626 22.0898 19.9664 21.0668 20.885 20.0349C22.6867 18.0109 23.709 15.6711 23.9559 13.0062C24.1498 10.9138 23.6971 8.55441 22.7366 6.65158C22.0902 5.3708 21.0673 4.03013 20.0356 3.11145C18.012 1.30944 15.6726 0.286928 13.0081 0.039964C12.4222 -0.0143437 11.5099 -0.0131713 10.9215 0.0426841ZM18.3338 8.48463C19.2527 9.48988 19.278 9.5229 19.1922 9.60366C19.1436 9.64938 17.2364 11.3813 14.9541 13.4522C12.6717 15.5232 10.7457 17.2718 10.674 17.338L10.5436 17.4583L7.91927 14.8339L5.29499 12.2095L6.29098 11.2126L7.28692 10.2156L8.95817 11.8867C9.87735 12.8058 10.6477 13.5464 10.67 13.5325C10.6923 13.5186 12.2087 12.1445 14.0397 10.4789C15.8708 8.81329 17.373 7.45016 17.3779 7.44969C17.3829 7.44922 17.8131 7.91496 18.3338 8.48463Z" />
+        </g>
+    </symbol>
+    <symbol id="close" viewBox="0 0 14 14">
+        <g>
+            <path d="M1.4 14L0 12.6L5.6 7L0 1.4L1.4 0L7 5.6L12.6 0L14 1.4L8.4 7L14 12.6L12.6 14L7 8.4L1.4 14Z" />
+        </g>
+    </symbol>
 </svg>
     <div class="wrapper">
+        <div class="popup">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <a href="" class="popup__close">
+                        <svg>
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </a>
+                    <div class="popup__icon">
+                        <img src="img/icons/email.svg" alt="email">
+                    </div>
+                    <div class="popup__title">лист успішно відправлено</div>
+                    <div class="popup__text">
+                        <p>
+                            Наш менеджер зв’яжеться з Вами найближчим часом
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <header class="header">
     <div class="header__main main-header">
         <div class="main-header__container container-small">
@@ -90,21 +121,27 @@
 </header>
         <main>
             <section class="main">
-                <div class="main__container container">
-                    <div class="main__row">
-                        <div class="main__image-block">
-                            <div class="main__image ibg">
-                                <img src="img/main-img.jpg" alt="main-img">
-                            </div>
+                <div class="main__inner">
+                    <div class="main__image-block">
+                        <div class="main__image ibg">
+                            <img src="img/main-img.jpg" alt="main-img">
                         </div>
-                        <div class="main__body body-main">
-                            <div class="body-main__container container-small">
-                                <div class="body-main__row">
-                                    <div class="body-main__content">
-                                        <h3 class="body-main__title">
-                                            WE GUIDE <span>IT SECURITY SOLUTIONS</span> INTO THE TOP FLIGHT!
-                                        </h3>
-                                        <a href="" class="body-main__btn">Contact Us</a>
+                        <div class="main__image_mob ibg">
+                            <img src="img/main-img-mob.jpg" alt="main-img">
+                        </div>
+                    </div>
+                    <div class="main__container container">
+                        <div class="main__row">
+                            <div class="main__body body-main">
+                                <div class="body-main__container container-small">
+                                    <div class="body-main__row">
+                                        <div class="body-main__content">
+                                            <h3 class="body-main__title">
+                                                WE GUIDE <span>IT SECURITY SOLUTIONS</span> INTO THE TOP FLIGHT!
+                                            </h3>
+                                            <a href="" class="body-main__btn link-scroll" data-scroll="contact">Contact
+                                                Us</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -142,11 +179,8 @@
                         </h3>
                         <div class="top-solutions__text text text-m">
                             <p>
-                                A wide portfolio of reliable cybersecurity solutions and services for multi-level
-                                protection of the corporate network and confidential data meets the needs of the most
-                                demanding users. Combining the skills of our experienced specialists and the
-                                cutting-edge technology of IT security products allows users to prevent, detect and
-                                quickly respond on cybersecurity risks and threats.
+                                A broad portfolio of cybersecurity solutions ensures multi-level protection, meeting the
+                                highest standards and demands
                             </p>
                         </div>
                     </div>
@@ -157,37 +191,7 @@
                                     <img src="img/solutions/01.svg" alt="solution">
                                 </div>
                                 <div class="item-solutions__title">
-                                    Endpoint and Server Security
-                                </div>
-                            </div>
-                        </div>
-                        <div class="solutions__column">
-                            <div class="solutions__item item-solutions">
-                                <div class="item-solutions__icon">
-                                    <img src="img/solutions/02.svg" alt="solution">
-                                </div>
-                                <div class="item-solutions__title">
-                                    Cloud Security
-                                </div>
-                            </div>
-                        </div>
-                        <div class="solutions__column">
-                            <div class="solutions__item item-solutions">
-                                <div class="item-solutions__icon">
-                                    <img src="img/solutions/03.svg" alt="solution">
-                                </div>
-                                <div class="item-solutions__title">
-                                    Extended Detection and Response
-                                </div>
-                            </div>
-                        </div>
-                        <div class="solutions__column">
-                            <div class="solutions__item item-solutions">
-                                <div class="item-solutions__icon">
-                                    <img src="img/solutions/04.svg" alt="solution">
-                                </div>
-                                <div class="item-solutions__title">
-                                    Identity and Data Protect<br>ion
+                                    Endpoint and<br> Server Security
                                 </div>
                             </div>
                         </div>
@@ -197,7 +201,37 @@
                                     <img src="img/solutions/05.svg" alt="solution">
                                 </div>
                                 <div class="item-solutions__title">
-                                    Advanced Threat Defense
+                                    Advanced Threat<br> Defense
+                                </div>
+                            </div>
+                        </div>
+                        <div class="solutions__column">
+                            <div class="solutions__item item-solutions">
+                                <div class="item-solutions__icon">
+                                    <img src="img/solutions/03.svg" alt="solution">
+                                </div>
+                                <div class="item-solutions__title">
+                                    Extended Detection<br> and Response
+                                </div>
+                            </div>
+                        </div>
+                        <div class="solutions__column">
+                            <div class="solutions__item item-solutions">
+                                <div class="item-solutions__icon">
+                                    <img src="img/solutions/04.svg" alt="solution">
+                                </div>
+                                <div class="item-solutions__title">
+                                    Identity and Data<br> Protection
+                                </div>
+                            </div>
+                        </div>
+                        <div class="solutions__column">
+                            <div class="solutions__item item-solutions">
+                                <div class="item-solutions__icon">
+                                    <img src="img/solutions/02.svg" alt="solution">
+                                </div>
+                                <div class="item-solutions__title">
+                                    Cloud<br> Security
                                 </div>
                             </div>
                         </div>
@@ -207,7 +241,7 @@
                                     <img src="img/solutions/06.svg" alt="solution">
                                 </div>
                                 <div class="item-solutions__title">
-                                    Threat Intellige<br>nce
+                                    Threat Intelligence
                                 </div>
                             </div>
                         </div>
@@ -227,7 +261,7 @@
                                     <img src="img/solutions/08.svg" alt="solution">
                                 </div>
                                 <div class="item-solutions__title">
-                                    Managed Service Provide
+                                    Managed<br> Service<br> Provide
                                 </div>
                             </div>
                         </div>
@@ -255,7 +289,7 @@
                                         <img src="img/benefits/02.png" alt="benefits">
                                     </div>
                                     <div class="item-benefits__title">
-                                        Technical expertise and support
+                                        Technical expertise<br> and support
                                     </div>
                                 </div>
                             </div>
@@ -295,13 +329,17 @@
                             <div class="body-resellers__container container-small">
                                 <div class="body-resellers__row">
                                     <div class="body-resellers__content">
-                                        <h2 class="body-resellers__title">Active Resellers</h2>
+                                        <h3 class="body-resellers__title">Active Resellers</h3>
                                         <div class="body-resellers__text text text-r">
                                             <p>
                                                 To distribute products in different countries and to be closer to the
                                                 end users we cooperate with more than 1000 companies – our resellers.
                                                 All the efforts of our team are aimed at maximum support for resellers,
-                                                their business and reputation.<br>
+                                                their business and reputation.
+                                            </p>
+                                        </div>
+                                        <div class="body-resellers__text-blue text">
+                                            <p>
                                                 We provide an extensive range of high-quality services to help our
                                                 resellers to keep customers satisfied and loyal:
                                             </p>
@@ -310,7 +348,7 @@
                                             <li class="body-resellers__item item-body-resellers">
                                                 <span class="item-body-resellers__icon">
                                                     <svg>
-                                                        <use xlink:href="#arrow-border"></use>
+                                                        <use xlink:href="#check"></use>
                                                     </svg>
                                                 </span>
                                                 New opportunities for business development
@@ -318,7 +356,7 @@
                                             <li class="body-resellers__item item-body-resellers">
                                                 <span class="item-body-resellers__icon">
                                                     <svg>
-                                                        <use xlink:href="#arrow-border"></use>
+                                                        <use xlink:href="#check"></use>
                                                     </svg>
                                                 </span>
                                                 Fine-tuned partner program
@@ -326,7 +364,7 @@
                                             <li class="body-resellers__item item-body-resellers">
                                                 <span class="item-body-resellers__icon">
                                                     <svg>
-                                                        <use xlink:href="#arrow-border"></use>
+                                                        <use xlink:href="#check"></use>
                                                     </svg>
                                                 </span>
                                                 Wide portfolio of highly reliable and optimal solutions
@@ -334,7 +372,7 @@
                                             <li class="body-resellers__item item-body-resellers">
                                                 <span class="item-body-resellers__icon">
                                                     <svg>
-                                                        <use xlink:href="#arrow-border"></use>
+                                                        <use xlink:href="#check"></use>
                                                     </svg>
                                                 </span>
                                                 Multi-functional web portal to place and execute orders easily
@@ -342,7 +380,7 @@
                                             <li class="body-resellers__item item-body-resellers">
                                                 <span class="item-body-resellers__icon">
                                                     <svg>
-                                                        <use xlink:href="#arrow-border"></use>
+                                                        <use xlink:href="#check"></use>
                                                     </svg>
                                                 </span>
                                                 24/7 information and technical support
@@ -350,7 +388,7 @@
                                             <li class="body-resellers__item item-body-resellers">
                                                 <span class="item-body-resellers__icon">
                                                     <svg>
-                                                        <use xlink:href="#arrow-border"></use>
+                                                        <use xlink:href="#check"></use>
                                                     </svg>
                                                 </span>
                                                 Trainings for sales and technical specialists
@@ -358,7 +396,7 @@
                                             <li class="body-resellers__item item-body-resellers">
                                                 <span class="item-body-resellers__icon">
                                                     <svg>
-                                                        <use xlink:href="#arrow-border"></use>
+                                                        <use xlink:href="#check"></use>
                                                     </svg>
                                                 </span>
                                                 Marketing activities and support
@@ -376,14 +414,16 @@
                     <div class="reseller__row">
                         <div class="reseller__content">
                             <h3 class="reseller__title">HOW TO BECOME A RESELLER?</h3>
+                            <div class="reseller__text_bold text">
+                                <p>
+                                    We're expanding and welcoming new partners! Interested in joining our global
+                                    network?
+                                </p>
+                            </div>
                             <div class="reseller__text text text-r">
                                 <p>
-                                    Our distribution channel is always in development progress and we are glad to
-                                    welcome new partners on board!<br>
-                                    If you want to become a part of our global family, please leave information about
-                                    your company to become a reseller and learn more about partnership. Our specialists
-                                    will contact you as soon as possible to clarify all the details. Together we will
-                                    find a solution to any issue and select the best ones to meet the needs of the
+                                    Leave your company info to become a reseller and learn more. Our specialists will
+                                    contact you soon to discuss the details and find the best solutions for your
                                     customers.
                                 </p>
                             </div>
@@ -404,23 +444,25 @@
                             <div class="body-vendors__container container-small">
                                 <div class="body-vendors__row">
                                     <div class="body-vendors__content">
-                                        <h2 class="body-vendors__title">Best Vendors Trust Us!</h2>
+                                        <h3 class="body-vendors__title">Best Vendors Trust Us!</h3>
                                         <div class="body-vendors__text text text-r">
                                             <p>
-                                                In cooperation with us, you will recieve a reliable master distributor
-                                                to take TOP positions and extend presence of your brand on different
-                                                markets. We have all necessary components for our common success –
-                                                20-years experienced team, active reseller channel and thousands loyal
-                                                customers in 10 countries (East Europe and Central Asia). There will be
-                                                provided a full range of services to distribute your solutions
-                                                effectively:
+                                                Partner with us for top market positions. With 20 years of experience, a
+                                                strong reseller network, and loyal customers in 10 countries, we ensure
+                                                your brand's success.
+                                            </p>
+                                        </div>
+                                        <div class="body-vendors__text_bold text">
+                                            <p>
+                                                There will be provided a full range of services to distribute your
+                                                solutions effectively:
                                             </p>
                                         </div>
                                         <ul class="body-vendors__list">
                                             <li class="body-vendors__item item-body-vendors">
                                                 <span class="item-body-vendors__icon">
                                                     <svg>
-                                                        <use xlink:href="#arrow-border"></use>
+                                                        <use xlink:href="#check"></use>
                                                     </svg>
                                                 </span>
                                                 Financial logistics
@@ -428,7 +470,7 @@
                                             <li class="body-vendors__item item-body-vendors">
                                                 <span class="item-body-vendors__icon">
                                                     <svg>
-                                                        <use xlink:href="#arrow-border"></use>
+                                                        <use xlink:href="#check"></use>
                                                     </svg>
                                                 </span>
                                                 Local presence on different markets
@@ -436,7 +478,7 @@
                                             <li class="body-vendors__item item-body-vendors">
                                                 <span class="item-body-vendors__icon">
                                                     <svg>
-                                                        <use xlink:href="#arrow-border"></use>
+                                                        <use xlink:href="#check"></use>
                                                     </svg>
                                                 </span>
                                                 24/7 information, sales and technical support for resellers and
@@ -445,7 +487,7 @@
                                             <li class="body-vendors__item item-body-vendors">
                                                 <span class="item-body-vendors__icon">
                                                     <svg>
-                                                        <use xlink:href="#arrow-border"></use>
+                                                        <use xlink:href="#check"></use>
                                                     </svg>
                                                 </span>
                                                 Marketing representation of your brand
@@ -583,7 +625,8 @@
                             Company ID: 54 974 631
                             <a href="tel:+421233331019" class="content-footer__link">+421 233 331 019</a>
                             <a href="mailto:info@adeon.international"
-                                class="content-footer__link content-footer__link_email">
+                                class="content-footer__link content-footer__link_email link-scroll"
+                                data-scroll="contact">
                                 info@adeon.international
                             </a>
                         </div>
@@ -638,7 +681,20 @@
                 </nav>
             </div>
         </div>
-        <div class="footer__copyright">COPYRIGHT ADEON International 2023</div>
+        <div class="footer__copyright">
+            <span class="footer__copyright-popup">
+                <p>
+                    No part of this publication may be reproduced, stored in a retrieval system, or transmitted inany
+                    form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without the
+                    prior written permission of the publisher. For permission
+                    contactADEON&nbsp;International,&nbsp;spol.&nbsp;s&nbsp;r.&nbsp;o
+                </p>
+            </span>
+            <span>
+                © 2024 ADEON International, spol. sr. o. - All rights reserved.<br>
+                All the names and brands used therein might be registered trademarks of their respective companies
+            </span>
+        </div>
     </div>
 </footer>
     </div>
