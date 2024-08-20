@@ -564,10 +564,7 @@ h3 {
   color: var(--white);
 }
 .content-footer__link_email {
-  text-decoration: underline;
-}
-.content-footer__link_email:hover {
-  text-decoration: underline;
+  cursor: default;
 }
 
 .menu-footer__list {
